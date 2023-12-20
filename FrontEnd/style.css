@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns: one for the left and two for the right */
+    gap: 20px; /* Adjust the gap between columns */
+}
+
+#actual {
+    grid-column: 1 / 2; /* Left column spans from 1st to 2nd column */
+}
+
+#forecast {
+    grid-column: 2 / 4; /* Right columns span from 2nd to 4th column */
+    display: grid;
+    gap: 20px; /* Adjust the gap between columns in the right side */
+}
+
+@media screen and (min-width: 768px) {
+    #forecast {
+        grid-template-columns: 1fr 1fr; /* Two columns for the right side */
+    }
+}

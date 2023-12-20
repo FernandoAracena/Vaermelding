@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="actual" id="actual">
+        <button id="find-me">My Location</button><br />
+        <h4 id="forecast1"></h4>
+        <img id="weather-icon" src="" alt="Weather Icon" style="max-width: 100px;">
+        <a id="map-link" target="_blank"></a>
+        <h1 id="temperature"></h1>
+        <h4 id="altitude"></h4>
+        <h4 id="humidity"></h4>
+        <h4 id="wind-direction"></h4>
+        <h4 id="wind-speed"></h4>
+        <h4 id="precipitation"></h4>
+        <h4 id="probPrecipitation"></h4>
+    </div>
+
+    <div class="forecast" id="forecast">
+        <div>
+            <h4 id="forecast6"></h4>
+            <img id="weather-icon6" src="" alt="Weather Icon6" style="max-width: 100px;">
+            <h5 id="probPrep6"></h5>
+            <h5 id="prepAm6"></h5>
+        </div>
+        <div>
+            <h4 id="forecast12"></h4>
+            <img id="weather-icon12" src="" alt="Weather Icon12" style="max-width: 100px;">
+            <h5 id="probPrep12"></h5>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
