@@ -31,9 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         const windFromDirection = weatherData.properties.timeseries[0].data.instant.details.wind_from_direction;
                         const windSpeed = weatherData.properties.timeseries[0].data.instant.details.wind_speed;
 
-                        document.getElementById('wind-direction').innerText = `${getWindDirection(windFromDirection)} (${windFromDirection}°)`;
-                        document.getElementById('wind-speed').innerText = `${windSpeed} m/s`;
+                                                // Convert wind speed from m/s to km/h
+                                                const windSpeedKmPerHour = windSpeed * 3.6;
 
+                        document.getElementById('wind-direction').innerText = `${getWindDirection(windFromDirection)}`;
+                        document.getElementById('wind-speed').innerText = `${windSpeedKmPerHour} km/h`;
 
                         // Hide or show precipitation-related elements based on the value
                         const precipitationElement = document.getElementById('precipitation');
@@ -84,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to get the cardinal direction from degrees
     function getWindDirection(degrees) {
-        const directions = ['↓ N', '↙ NE', '← E', '↖ SE', '↑ S', '↘ SW', '→ W', '↗ NW'];
+        const directions = ['↓ N', '↙ NE', '← E', '↖ SE', '↑ S', '↗ SW', '→ W', '↘ NW'];
         const index = Math.round(degrees / 45) % 8;
         return directions[index];
     }
