@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const windSpeed = weatherData.properties.timeseries[0].data.instant.details.wind_speed;
 
                                                 // Convert wind speed from m/s to km/h
-                                                const windSpeedKmPerHour = windSpeed * 3.6;
+                                                const windSpeedKmPerHour = Math.round(windSpeed * 3.6);
 
                         document.getElementById('wind-direction').innerText = `${getWindDirection(windFromDirection)}`;
                         document.getElementById('wind-speed').innerText = `${windSpeedKmPerHour} km/h`;
